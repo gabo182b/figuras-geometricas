@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/mobile.css" />
+    <link
+      rel="stylesheet"
+      href="./styles/tablet.css"
+      media="screen and (min-width: 600px)"
+    />
+    <link
+      rel="stylesheet"
+      href="./styles/desktop.css"
+      media="screen and (min-width: 800px)"
+    />
+    <title>Figuras Geométricas</title>
+  </head>
+  <body>
+    <h1 class="title">Ayudante para calcular figuras geométricas</h1>
+    <main id="main-container">
+      <section id="square" class="figure-container">
+        <div class="form-container">
+          <h2>Cuadrado</h2>
+          <form id="form">
+            <div class="form-group-square">
+              <label for="inputCuadrado">Lado:</label>
+              <input type="number" id="inputCuadrado" placeholder="ej. 5cm" />
+              <span class="">cm</span>
+            </div>
+            <div class="btn-group">
+              <button type="button" onclick="cacularPerimetroCuadrado()">
+                Calcular el perímetro
+              </button>
+              <button type="button" onclick="cacularAreaCuadrado()">
+                Calcular el área
+              </button>
+            </div>
+            <div class="result">
+              <div class="operation-result op1">
+                <p id="result-name">Perimetro:</p>
+                <p id="result-span-perimeter-square" class="result-span">0cm</p>
+              </div>
+              <div class="operation-result op2">
+                <p id="result-name">Area:</p>
+                <p id="result-span-area-square" class="result-span">0cm</p>
+              </div>
+              <div>
+                <button class="undo" onclick="undo()">
+                  <img
+                    class="img-undo"
+                    src="./images/undo-circular-arrow.png"
+                    alt="undo button"
+                  />
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section id="triangle" class="figure-container">
+        <div class="form-container">
+          <h2>Triángulo</h2>
+          <form id="form">
+            <div class="form-group-triangle">
+              <label for="inputLadoUnoTriangulo">Lado 1:</label>
+              <input
+                type="number"
+                id="inputLadoUnoTriangulo"
+                placeholder="ej. 5cm"
+              />
+              <span class="">cm</span>
+            </div>
+            <div class="form-group-triangle">
+              <label for="inputLadoDosTriangulo">Lado 2:</label>
+              <input
+                type="number"
+                id="inputLadoDosTriangulo"
+                placeholder="ej. 5cm"
+              />
+              <span class="">cm</span>
+            </div>
+            <div class="form-group-triangle">
+              <label class="base-label" for="inputBaseTriangulo">Base:</label>
+              <input
+                type="number"
+                id="inputBaseTriangulo"
+                class="base-input"
+                placeholder="ej. 5cm"
+              />
+              <span class="base-span">cm</span>
+            </div>
+            <div class="form-group-triangle high-form">
+              <label class="high-label" for="inputAlturaTriangulo"
+                >Altura:</label
+              >
+              <input
+                type="number"
+                id="inputAlturaTriangulo"
+                placeholder="ej. 5cm"
+              />
+              <span class="">cm</span>
+            </div>
+            <div class="btn-group">
+              <button type="button" onclick="calcularPerimetroTriangulo()">
+                Calcular el perímetro
+              </button>
+              <button type="button" onclick="calcularAreaTriangulo()">
+                Calcular el Área
+              </button>
+            </div>
+            <div class="result">
+              <div class="operation-result op1">
+                <p id="result-name">Perimetro:</p>
+                <p id="result-span-perimeter-triangle" class="result-span">
+                  0cm
+                </p>
+              </div>
+              <div class="operation-result op2">
+                <p id="result-name">Area:</p>
+                <p id="result-span-area-triangle" class="result-span">0cm</p>
+              </div>
+              <div>
+                <button class="undo" onclick="undo()">
+                  <img
+                    class="img-undo"
+                    src="./images/undo-circular-arrow.png"
+                    alt="undo button"
+                  />
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section id="isosceles-triangle" class="figure-container">
+        <div class="form-container">
+          <h2>Triángulo isósceles</h2>
+          <form id="form">
+            <div class="form-group-isoceles-triangle">
+              <label for="inputLadoUnoTrianguloIsosceles">Lado 1:</label>
+              <input
+                type="number"
+                id="inputLadoUnoTrianguloIsosceles"
+                placeholder="ej. 5cm"
+              />
+              <span class="">cm</span>
+            </div>
+            <div class="form-group-isoceles-triangle">
+              <label for="inputLadoDosTrianguloIsosceles">Lado 2:</label>
+              <input
+                type="number"
+                id="inputLadoDosTrianguloIsosceles"
+                placeholder="ej. 5cm"
+              />
+              <span class="">cm</span>
+            </div>
+            <div class="form-group-isoceles-triangle base-form">
+              <label class="base-label" for="inputBaseTrianguloIsosceles"
+                >Base:</label
+              >
+              <input
+                type="number"
+                id="inputBaseTrianguloIsosceles"
+                placeholder="ej. 5cm"
+              />
+              <span class="">cm</span>
+            </div>
+            <div class="btn-group">
+              <button
+                type="button"
+                onclick="calcularAlturaTrianguloIsosceles()"
+              >
+                Calcular la altura
+              </button>
+            </div>
+            <div class="result">
+              <div class="operation-result op1">
+                <p id="result-name">Altura:</p>
+                <p id="result-span-isoceles-triangle" class="result-span">
+                  0cm
+                </p>
+              </div>
+              <div>
+                <button class="undo" onclick="undo()">
+                  <img
+                    class="img-undo"
+                    src="./images/undo-circular-arrow.png"
+                    alt="undo button"
+                  />
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section id="circle" class="figure-container">
+        <div class="form-container">
+          <h2>Circulo</h2>
+          <form id="form">
+            <div class="form-group-circle">
+              <label for="inputRadioCirculo">Radio:</label>
+              <input
+                type="number"
+                id="inputRadioCirculo"
+                placeholder="ej. 5cm"
+              />
+              <span class="">cm</span>
+            </div>
+            <div class="btn-group">
+              <button type="button" onclick="calcularPerimetroCirculo()">
+                Calcular el perímetro
+              </button>
+              <button type="button" onclick="cacularAreaCirculo()">
+                Calcular el Área
+              </button>
+            </div>
+            <div class="result">
+              <div class="operation-result op1">
+                <p id="result-name">Perimetro:</p>
+                <p id="result-span-perimeter-circle" class="result-span">0cm</p>
+              </div>
+              <div class="operation-result op2">
+                <p id="result-name">Area:</p>
+                <p id="result-span-area-circle" class="result-span">0cm</p>
+              </div>
+              <div>
+                <button class="undo" onclick="undo()">
+                  <img
+                    class="img-undo"
+                    src="./images/undo-circular-arrow.png"
+                    alt="undo button"
+                  />
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

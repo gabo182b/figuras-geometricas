@@ -1,0 +1,281 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: linear-gradient(to top, #9795f0 0%, #fbc8d4 100%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  font-size: 1.6rem;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 900;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rem;
+}
+
+.figure-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  background-image: inherit;
+  border: 0.1rem solid black;
+  border-radius: 1.5rem;
+  margin: 2rem 0;
+  margin: 1rem 2rem;
+}
+
+.figure-container h2 {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+/*Square*/
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.form-group-square {
+  border-radius: 1rem;
+  background-color: white;
+  padding: 0.5rem 0.2rem;
+  margin: 1rem 0.5rem 1rem 0.5rem;
+  width: 100%;
+}
+
+.form-group-square:hover {
+  box-shadow: 0 1px 6px 0 #20212447;
+  border-color: #dfe1e500;
+}
+
+.form-group-square label {
+  margin-left: 0.5rem;
+}
+
+.form-group-square input {
+  max-width: 15rem;
+}
+
+.form-group-square span {
+  margin-right: 0.5rem;
+}
+
+#inputCuadrado,
+#inputLadoUnoTriangulo,
+#inputLadoDosTriangulo,
+#inputBaseTriangulo,
+#inputAlturaTriangulo,
+#inputLadoUnoTrianguloIsosceles,
+#inputLadoDosTrianguloIsosceles,
+#inputBaseTrianguloIsosceles,
+#inputRadioCirculo {
+  margin: 0.1rem;
+  border: none;
+}
+
+.btn-group {
+  margin-top: 0.1rem;
+  display: inline-block;
+  width: 100%;
+}
+
+.btn-group button {
+  background-color: mediumpurple;
+  padding: 0.4rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.btn-group button:hover {
+  box-shadow: 0 1px 6px 0 #20212447;
+  border-color: #dfe1e500;
+}
+
+.result {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  border-radius: 1rem;
+  width: 60%;
+  background-color: mediumpurple;
+  box-shadow: 0 1px 6px 0 #20212447;
+}
+.operation-result {
+  display: flex;
+  padding: 0.5rem;
+  font-weight: bolder;
+  padding: 1rem;
+  padding: 0;
+}
+
+.op1 {
+  margin-top: 1rem;
+}
+
+.op2 {
+  margin-bottom: -0.3rem;
+}
+
+.result-span {
+  margin-left: 1rem;
+}
+
+.undo {
+  margin-bottom: 1rem;
+  background-color: mediumpurple;
+  border: none;
+  cursor: pointer;
+}
+
+.undo .img-undo {
+  width: auto;
+  height: 3rem;
+}
+
+.undo .img-undo:hover {
+  filter: invert(1);
+}
+
+/*Triangle*/
+.form-group-triangle {
+  border-radius: 1rem;
+  background-color: white;
+  padding: 0.5rem 0.2rem;
+  margin: 1rem 0.5rem 1rem 0.5rem;
+  width: 100%;
+  max-width: 240.88px;
+  margin-bottom: 0.3rem;
+}
+
+.form-group-triangle:hover {
+  box-shadow: 0 1px 6px 0 #20212447;
+  border-color: #dfe1e500;
+}
+
+.form-group-triangle label {
+  margin-left: 0.5rem;
+}
+
+.form-group-triangle input {
+  max-width: 14rem;
+}
+
+.form-group-triangle span {
+  margin-right: 0.5rem;
+}
+
+.form-group-triangle .base-label {
+  float: left;
+  margin-left: 0.9rem;
+  margin-right: 1.5rem;
+}
+
+.high-form {
+  margin-bottom: 1rem;
+}
+
+.form-group-triangle .high-label {
+  float: left;
+  margin-left: 0.9rem;
+  margin-right: 0.5rem;
+}
+
+/*isoceles triangle*/
+
+.form-group-isoceles-triangle {
+  border-radius: 1rem;
+  background-color: white;
+  padding: 0.5rem 0.2rem;
+  margin: 1rem 0.5rem 1rem 0.5rem;
+  width: 100%;
+  max-width: 240.88px;
+  margin-bottom: 0.3rem;
+}
+
+.form-group-isoceles-triangle:hover {
+  box-shadow: 0 1px 6px 0 #20212447;
+  border-color: #dfe1e500;
+}
+
+.form-group-isoceles-triangle input {
+  max-width: 14rem;
+}
+
+.form-group-isoceles-triangle label {
+  margin-left: 0.5rem;
+}
+
+.form-group-isoceles-triangle input {
+  max-width: 14rem;
+}
+
+.form-group-isoceles-triangle span {
+  margin-right: 0.5rem;
+}
+
+.form-group-isoceles-triangle .base-label {
+  float: left;
+  margin-left: 0.9rem;
+  margin-right: 1.5rem;
+}
+
+.base-form {
+  margin-bottom: 1rem;
+}
+
+/*Circle*/
+.form-group-circle {
+  border-radius: 1rem;
+  background-color: white;
+  padding: 0.5rem 0.2rem;
+  margin: 1rem 0.5rem 1rem 0.5rem;
+  width: 100%;
+  max-width: 240.88px;
+  margin-bottom: 1rem;
+}
+
+.form-group-circle:hover {
+  box-shadow: 0 1px 6px 0 #20212447;
+  border-color: #dfe1e500;
+}
+
+.form-group-circle input {
+  max-width: 14rem;
+}
+
+.form-group-circle label {
+  margin-left: 0.5rem;
+}
+
+.form-group-circle input {
+  max-width: 14rem;
+}
+
+.form-group-circle span {
+  margin-right: 0.5rem;
+}
