@@ -92,8 +92,9 @@ function calcularAreaTriangulo() {
   resArea.innerHTML = area.toFixed(2) + "cm";
 }
 
-/*Isnt working */
+//Triangulo isosceles
 function calcularAlturaTrianguloIsosceles() {
+  const resAltura = document.getElementById("result-span-isoceles-triangle");
   const inputLado1 = document.getElementById("inputLadoUnoTrianguloIsosceles");
   const lado1 = parseInt(inputLado1.value);
   const inputLado2 = document.getElementById("inputLadoDosTrianguloIsosceles");
@@ -101,34 +102,16 @@ function calcularAlturaTrianguloIsosceles() {
   const inputBase = document.getElementById("inputBaseTrianguloIsosceles");
   const base = parseInt(inputBase.value);
 
-  if (lado1 != lado2) {
-    alert("No es un triángulo isósceles");
+  if (lado1 === lado2 && lado1 != base && lado2 != base) {
+    const hipotenusa = lado1; //c
+    const catetoB = base / 2;
+    const catetoA = Math.sqrt(hipotenusa ** 2 - catetoB ** 2);
+    const h = Math.round(catetoA);
+
+    resAltura.innerHTML = h + "cm";
   } else {
-    const lado2Dividido = base / 2;
-    const baseDividida = lado1;
-    const lado2DivididoCuadrado = lado2Dividido * lado2Dividido;
-    const baseDivididaCuadrada = baseDividida * baseDividida;
-    const lado1Dividido = Math.sqrt(
-      baseDivididaCuadrada - lado2DivididoCuadrado
-    );
-
-    const altura = lado1Dividido.toFixed(2);
-
-    return alert(altura);
+    alert("No es un triángulo isósceles");
   }
-  // function isosceles(lado1, lado2, base) {}
-
-  // if (lado1 === lado2 && lado1 != base && lado2 != base) {
-  //   const cateto = (base / 2) ** 2;
-  //   const hipotenusa = lado1 ** 2;
-  //   const altura = Math.sqrt(hipotenusa - cateto).toFixed(2);
-  //   alert(altura);
-
-  //   // const altura = Math.sqrt(lado1 * lado1 - base * base);
-  //   // alert(altura);
-  // } else {
-  //   alert("No es un triángulo isósceles");
-  // }
 }
 
 //Circulo
